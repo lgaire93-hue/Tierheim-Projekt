@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/main.js" defer></script>
+    <title>Tierheim</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                aria-label="Menu"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              id="navigation" aria-label="Hauptnavigation"
+            >
+            <li><a href="#tiere">Unsere Tiere</a></li>  
+            <li><a href="#adoption">Adoption</a></li>   
+            <li><a href="#ueber">Über uns</a></li>      
+            <li><a href="#helfen">Helfen</a></li>         
+            <li><a href="#wissen">Wissenswertes</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>     
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">🐶Tierheim</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1"
+          id="navigation" aria-label="Hauptnavigation">
+            <li><a href="#tiere">Unsere Tiere</a></li>
+            <li><a href="#adoption">Adoption</a></li>
+            <li><a href="#ueber">Über uns</a></li>
+            <li><a href="#helfen">Helfen</a></li>
+            <li><a href="#wissen">Wissenswertes</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn btn-primary" href="#helfen">
+            Gutes tun ♡
+          </a>
+        </div>
+        </div>
+      </div>
+    </header>
+
+    <aside>
+        <div role="alert" class="alert alert-info flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            class="h-6 w-6 
+            shrink-0 
+            stroke-current"
+        >
+            <path stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="2" 
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+            </path>
+        </svg>
+            <span class="font-bold">Jedes Tier verdient ein Zuhause.</span>
+        </div>
+    </aside>
+
+    <main class="flex flex-col gap-16">
+      <section class="section-hero">
+        <div
+          class="hero min-h-20 md:min-h-80 xl:min-h-screen"
+          style="
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbdxCKgMdHUoXeHGzj1kpLd0-irFDluudk9Px6JYVhIA&s=10 );
+          "
+        >
+          <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-4xl font-bold">Sie warten. Auf dich.</h1>
+              <p class="mb-5">
+                Ein Zuhause beginnt mit einem Kennenlernen...
+              </p>
+              <a class="btn font-semibold bg-[#E55934]" href="#tiere">
+                Tiere kennenlernen
+                <span>↗</span>
+              </a>
+
+              <a class="btn font-semibold bg-[#FA7921]" href="#helfen">
+                So kannst du helfen
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="ribbon">
+      <div class="wrap">
+         <aside>                                                                 
+             <div class="alert alert-info flex justify-around">    
+             <!-- <svg xmlns="http://www.w3.org/2000/svg"                             -->
+             <!--     fill="none"                                                      -->
+             <!--     viewBox="0 0 24 24"                                              -->
+             <!--     class="h-6 w-6                                                   -->
+             <!--     shrink-0                                                         -->
+             <!--     stroke-current"                                                  -->
+             <!-- >                                                                    -->
+             <!--     <path stroke-linecap="round"                                     -->
+             <!--     stroke-linejoin="round"                                          -->
+             <!--     stroke-width="2"                                                 -->
+             <!--     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">   -->
+             <!--     </path>                                                          -->
+             <!-- </svg>                                                               -->
+                <span><b>01</b> Ein Tier kennenlernen</span>           
+                <span><b>02</b> Gemeinsam Vertrauen aufbauen</span>   
+                <span><b>03</b> Ein Zuhause fürs Leben schenken</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section id="tiere">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">
+              Ein Platz auf deinem Sofa?
+            </div>
+
+            <h2>Sie warten auf ihr Glück.</h2>
+          </div>
+
+          <p>
+            Jedes Tier hat seine eigene Geschichte.
+            Finde heraus, welcher Charakter zu deinem Leben passt.
+          </p>
+        </div>
+
+        <div class="filters" aria-label="Tiere filtern">
+          <button
+            class="chip active btn btn-primary"
+            data-type="Alle"
+            aria-pressed="true"
+          >
+            Alle Tiere
+          </button>
+
+          <button
+            class="chip btn btn-primary"
+            data-type="Hund"
+            aria-pressed="false"
+          >
+            Hunde
+          </button>
+
+          <button
+            class="chip btn btn-primary"
+            data-type="Katze"
+            aria-pressed="false"
+          >
+            Katzen
+          </button>
+
+          <button
+            class="chip btn btn-primary"
+            data-type="Kleintier"
+            aria-pressed="false"
+          >
+            Kleintiere
+          </button>
+
+          <button
+            class="chip btn btn-primary"
+            data-type="saved"
+            aria-pressed="false"
+          >
+            ♡ Merkliste
+          </button>
+
+          <input
+            id="search"
+            class="search"
+            aria-label="Tiere nach Namen oder Merkmal suchen"
+            placeholder="Name oder Merkmal suchen …"
+            type="search"
+          >
+        </div>
+
+        <!-- JavaScript fügt hier die Tierkarten ein -->
+        <div
+          id="animals"
+          class="grid "
+          aria-live="polite"
+        ></div>
+        <!-- Gemeinsames Fenster für Tierdetails und Ratgeber -->      
+        <dialog id="modal">                                      
+          <button                                                
+            class="close"                                        
+            aria-label="Fenster schließen"                       
+          >                                                      
+            ×                                                    
+          </button>                                              
+          <div class="modal" id="modal-content"></div>           
+        </dialog>                                                
+
+      </div>
+    </section>
+
+    <!-- Adoptionsablauf -->
+    <section id="adoption" class="subtle">
+      <div class="wrap">
+        <div class="eyebrow">
+          Aus Kennenlernen wird Ankommen
+        </div>
+
+        <h2>Der Weg zu deinem neuen Begleiter.</h2>
+
+        <p>
+          Eine gute Vermittlung braucht Zeit.
+          So kann ein verantwortungsvoller Adoptionsprozess aussehen.
+        </p>
+
+        <div class="steps">
+          <article>
+            <div class="num">1</div>
+
+            <h3>Entdecken &amp; nachfragen</h3>
+
+            <p>
+              Lies das Tierprofil und überlege, was zu deinem Alltag,
+              deiner Wohnsituation und deiner Erfahrung passt.
+            </p>
+          </article>
+
+          <article>
+            <div class="num">2</div>
+
+            <h3>In Ruhe kennenlernen</h3>
+
+            <p>
+              Bei einem vereinbarten Besuch könnt ihr euch beschnuppern.
+              Alle Haushaltsmitglieder sollten einbezogen werden.
+            </p>
+          </article>
+
+          <article>
+            <div class="num">3</div>
+
+            <h3>Gemeinsam vorbereiten</h3>
+
+            <p>
+              Besprich Bedürfnisse, Ausstattung und die Eingewöhnung
+              mit dem Tierheim. Kläre auch laufende Kosten und Betreuung.
+            </p>
+          </article>
+
+          <article>
+            <div class="num">4</div>
+
+            <h3>Willkommen zu Hause</h3>
+
+            <p>
+              Gib deinem Tier Ruhe, feste Abläufe und Zeit.
+              Die konkreten Vertragsbedingungen erklärt
+              das vermittelnde Tierheim.
+            </p>
+          </article>
+        </div>
+
+        <div class="actions">
+          <button
+            class="btn light"
+            data-guide="check"
+          >
+            Checkliste vor der Adoption ↗
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Über das Tierheim -->
+    <section id="ueber">
+      <div class="wrap story">
+        <img
+          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=85"
+          loading="lazy"
+          alt="Zwei Hunde laufen gemeinsam auf einem Weg"
+        >
+
+        <div>
+          <div class="eyebrow">Was uns antreibt</div>
+
+          <h2>
+            Ein sicherer Ort.<br>
+            Eine zweite Chance.
+          </h2>
+
+          <p>
+            Ein Tierheim ist eine Zwischenstation auf dem Weg
+            in ein neues Leben. Hier stehen Geborgenheit,
+            individuelle Betreuung und eine passende Vermittlung
+            im Mittelpunkt.
+          </p>
+
+          <p>
+            Diese Musterseite zeigt, wie ein Tierheim seine Arbeit
+            transparent vorstellen kann. Die Geschichte des echten
+            Tierheims, sein Team und seine Angebote werden hier ergänzt.
+          </p>
+
+          <ul class="check">
+            <li>
+              Das passende Zuhause statt einer schnellen Entscheidung
+            </li>
+
+            <li>
+              Respekt vor dem Charakter jedes einzelnen Tieres
+            </li>
+
+            <li>
+              Offene Gespräche und ehrliche Informationen
+            </li>
+          </ul>
+
+          <a href="#kontakt" class="text-btn">
+            Kontakt &amp; Besuch planen ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Helfen -->
+    <section id="helfen" class="help">
+      <div class="wrap">
+        <div class="eyebrow">
+          Zusammen können wir mehr bewegen
+        </div>
+
+        <h2>
+          Du musst kein Tier adoptieren,<br>
+          um sein Leben zu verändern.
+        </h2>
+
+        <div class="help-grid">
+          <article>
+            <span class="symbol" aria-hidden="true">♡</span>
+
+            <h3>Zeit schenken</h3>
+
+            <p>
+              Gassigehen, Beschäftigung oder Unterstützung im Alltag:
+              Ehrenamt kann viele Formen haben. Aufgaben werden
+              nach Bedarf und Einweisung vergeben.
+            </p>
+
+            <button
+              class="text-btn"
+              data-guide="volunteer"
+            >
+              Ehrenamt kennenlernen ↗
+            </button>
+          </article>
+
+          <article>
+            <span class="symbol" aria-hidden="true">✳</span>
+
+            <h3>Mit Sachspenden helfen</h3>
+
+            <p>
+              Futter, Decken oder Zubehör können helfen,
+              wenn sie tatsächlich gebraucht werden.
+              Frage vor einer Abgabe nach einer aktuellen Bedarfsliste.
+            </p>
+
+            <button
+              class="text-btn"
+              data-guide="donate"
+            >
+              Was wird gebraucht? ↗
+            </button>
+          </article>
+
+          <article>
+            <span class="symbol" aria-hidden="true">∞</span>
+
+            <h3>Langfristig begleiten</h3>
+
+            <p>
+              Patenschaften und regelmäßige Unterstützung können
+              Planungssicherheit schaffen. Die Angebote des echten
+              Tierheims werden hier vorgestellt.
+            </p>
+
+            <button
+              class="text-btn"
+              data-guide="sponsor"
+            >
+              Mehr über Patenschaften ↗
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ratgeber -->
+    <section id="wissen">
+      <div class="wrap">
+        <div class="eyebrow">
+          Gut informiert. Gut vorbereitet.
+        </div>
+
+        <h2>Wissen, das beim Zusammenleben hilft.</h2>
+
+        <div class="info-grid">
+          <article class="info">
+            <small>VORBEREITUNG · 4 IMPULSE</small>
+
+            <h3>Passt ein Tier in meinen Alltag?</h3>
+
+            <p>
+              Zeit, Kosten, Wohnsituation und Betreuung:
+              Diese Fragen solltest du vor einer Adoption besprechen.
+            </p>
+
+            <button
+              class="text-btn"
+              data-guide="check"
+            >
+              Ratgeber öffnen ↗
+            </button>
+          </article>
+
+          <article class="info">
+            <small>ANKOMMEN · 5 IMPULSE</small>
+
+            <h3>Die ersten Tage zu Hause</h3>
+
+            <p>
+              Ein ruhiger Rückzugsort und verlässliche Routinen
+              erleichtern den Start in einer neuen Umgebung.
+            </p>
+
+            <button
+              class="text-btn"
+              data-guide="arrival"
+            >
+              Tipps zur Eingewöhnung ↗
+            </button>
+          </article>
+
+          <article class="info">
+            <small>ORIENTIERUNG · NÄCHSTE SCHRITTE</small>
+
+            <h3>Ein Tier gefunden oder vermisst?</h3>
+
+            <p>
+              Ruhe bewahren, Informationen sammeln und passende
+              Ansprechstellen vor Ort kontaktieren.
+            </p>
+
+            <button
+              class="text-btn"
+              data-guide="found"
+            >
+              Informationen ansehen ↗
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Häufige Fragen -->
+    <section class="subtle" id="fragen">
+      <div class="wrap faq">
+        <div>
+          <div class="eyebrow">Noch Fragen?</div>
+
+          <h2>Gut zu wissen.</h2>
+
+          <p>
+            Die häufigsten Fragen rund um Adoption und Unterstützung.
+          </p>
+        </div>
+
+        <div>
+          <details>
+            <summary>
+              Kann ich ein Tier direkt mitnehmen?
+            </summary>
+
+            <p>
+              Die Vermittlung richtet sich nach dem Tier und dem Ablauf
+              des Tierheims. Plane ein persönliches Gespräch und
+              ausreichend Zeit zum Kennenlernen ein.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Wie hoch ist die Schutzgebühr?
+            </summary>
+
+            <p>
+              Auf dieser Musterseite gibt es keine festgelegten Gebühren.
+              Das zuständige Tierheim informiert über tatsächliche
+              Beträge, enthaltene Leistungen und Vertragsbedingungen.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Kann ich mit Kindern ein Tier adoptieren?
+            </summary>
+
+            <p>
+              Das hängt vom einzelnen Tier, dem Alter der Kinder
+              und dem Alltag der Familie ab. Besprich die Situation
+              offen mit dem Vermittlungsteam und lernt das Tier
+              gemeinsam kennen.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Was muss ich als Mieter beachten?
+            </summary>
+
+            <p>
+              Kläre vor einer Adoption, welche Regelungen für deine
+              Wohnung gelten, und besprich offene Fragen mit der
+              Vermietung. Verlässliche Absprachen verhindern
+              spätere Schwierigkeiten.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Kann ich auch ohne Erfahrung ehrenamtlich helfen?
+            </summary>
+
+            <p>
+              Mögliche Aufgaben hängen von den Angeboten des Tierheims ab.
+              Frage nach Einführung, Voraussetzungen und festen
+              Einsatzzeiten.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Sind die gezeigten Tiere wirklich zu vermitteln?
+            </summary>
+
+            <p>
+              Nein. Alle Profile auf dieser Website sind ausdrücklich
+              Beispiele. Eine echte Vermittlung oder Reservierung
+              ist hier noch nicht möglich.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt">
+      <div class="wrap contact">
+        <div>
+          <div class="eyebrow">
+            Der erste Schritt ist ein Gespräch
+          </div>
+
+          <h2>Wir freuen uns aufs Kennenlernen.</h2>
+
+          <p>
+            Für einen echten Besuch brauchst du die bestätigten
+            Kontaktdaten und Besuchszeiten des Tierheims.
+            Diese Angaben werden ergänzt, sobald das Tierheim feststeht.
+          </p>
+
+          <button
+            class="btn"
+            data-guide="contact"
+          >
+            Besuch vorbereiten ↗
+          </button>
+        </div>
+
+        <aside>
+          <h3>Kontakt &amp; Besuch</h3>
+
+          <p>
+            <b>Tierheim:</b> Name folgt<br>
+            <b>Adresse:</b> Standort folgt<br>
+            <b>Telefon &amp; E-Mail:</b> noch nicht hinterlegt
+          </p>
+
+          <p>
+            <b>Besuchszeiten</b><br>
+            Werden vom Tierheim ergänzt.<br>
+            Bitte keine unangekündigten Besuche einplanen.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fußbereich -->
+    <footer                                                                                        
+      class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"                     
+    >                                                                                              
+      <aside>                                                                                      
+        <svg                                                                                         
+          width="50"                                                                               
+          height="50"                                                                              
+          viewBox="0 0 24 24"                                                                      
+          xmlns="http://www.w3.org/2000/svg"                                                       
+          fill-rule="evenodd"                                                                      
+          clip-rule="evenodd"                                                                      
+          class="fill-current"                                                                     
+        >                                                                                                                          
+        </svg>                                                                                     
+        <p>                                                                                        
+          ACME Industries Ltd.                                                                     
+          <br />                                                                                   
+          Providing reliable tech since 1992                                                       
+        </p>                                                                                       
+      </aside>                                                                                     
+      <nav>                                                                                        
+        <h6 class="footer-title">Social</h6>                                                       
+        <div class="grid grid-flow-col gap-4">                                                     
+          <a>                                                                                      
+            <svg                                                                                   
+              aria-label="Twitter"                                                                 
+              xmlns="http://www.w3.org/2000/svg"                                                   
+              width="24"                                                                             
+              height="24"                                                                          
+              viewBox="0 0 24 24"                                                                  
+              class="fill-current"                                                                 
+            >                                                                                                
+            </svg>                                                                                 
+          </a>                                                                                       
+          <a>                                                                                      
+            <svg                                                                                   
+              aria-label="YouTube"                                                                 
+              xmlns="http://www.w3.org/2000/svg"                                                   
+              width="24"                                                                           
+              height="24"                                                                          
+              viewBox="0 0 24 24"                                                                  
+              class="fill-current"                                                                 
+            >
+            </svg>                                                                                 
+          </a>                                                                                     
+          <a>                                                                                      
+            <svg                                                                                   
+              aria-label="Facebook"                                                                
+              xmlns="http://www.w3.org/2000/svg"                                                   
+              width="24"                                                                           
+              height="24"                                                                          
+              viewBox="0 0 24 24"                                                                  
+              class="fill-current"                                                                 
+            >     
+            </svg>                                                                                 
+          </a>                                                                                     
+        </div>                                                                                     
+      </nav>                                                                                       
+    </footer>                                                                                      
+
+  </body>
+</html>
